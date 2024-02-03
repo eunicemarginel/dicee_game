@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: #393E46;
+  background-color: black;
 }
 
 h1 {
@@ -29,7 +29,8 @@ p {
 }
 
 img {
-  width: 80%;
+  width: 40%;
+  border-radius: 50%;
 }
 
 button {

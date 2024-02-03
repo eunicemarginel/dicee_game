@@ -1,22 +1,16 @@
-function rollDice() {
-  var randomNumber1 = Math.floor(Math.random() * 6) + 1;
-  var randomDiceImage = "dice" + randomNumber1 + ".png";
-  var randomImageSource = "images/" + randomDiceImage;
+function pickName() {
+  var randomName = Math.floor(Math.random() * 5) + 1;
+  var randomNameImage = "name" + randomName + ".png";
+  var randomImageSource = "images/" + randomNameImage;
   var image1 = document.querySelectorAll("img")[0];
   image1.setAttribute("src", randomImageSource);
 
-  var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-  var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
-  document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
-
-  if (randomNumber1 > randomNumber2) {
-    document.querySelector("h1").innerHTML = "🚩 Play 1 Wins!";
-  } else if (randomNumber2 > randomNumber1) {
-    document.querySelector("h1").innerHTML = "Player 2 Wins! 🚩";
+  if (randomName) {
+    document.querySelector("h1").innerHTML = "This week's Leader is";
   } else {
-    document.querySelector("h1").innerHTML = "Draw!";
+    document.querySelector("h1").innerHTML = "Pick again!";
   }
 }
 
 // Add click event listener to the button
-document.getElementById("rollButton").addEventListener("click", rollDice);
+document.getElementById("pickButton").addEventListener("click", pickName);
